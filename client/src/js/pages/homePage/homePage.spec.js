@@ -27,10 +27,14 @@ describe('HomePage', () => {
 
   describe('#leftButtonEvent', () => {
     it('audioHub plays a sound', () => {
-      spyOn(AudioHub, 'playSound')
       const page = new HomePage();
+      spyOn(AudioHub, 'playSound');
+      spyOn(page, 'navigate');
+
       page.leftButtonEvent();
+
       expect(AudioHub.playSound).toBeCalledWith('./sounds/plop.mp3');
+      expect(page.navigate).toHaveBeenCalledWith('counter');
     });
   });
 
