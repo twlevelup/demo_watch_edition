@@ -5,7 +5,7 @@
   "author": "LevelUp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twlevelup/watch_edition"
+    "url": "https://github.com/twlevelup/demo_watch_edition"
   },
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --inline --disableHostCheck --hot",
