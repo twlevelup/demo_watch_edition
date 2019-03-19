@@ -9,9 +9,9 @@ class HomePage extends BasePage {
 
   pageWillLoad() {
     StorageHub.setData('contacts', [
-      { name: 'Ray', phoneNumber: '0431 111 111' },
-      { name: 'Sinan', phoneNumber: '0431 222 222' },
-      { name: 'Jafari', phoneNumber: '0431 333 333' },
+      { name: 'Ray', phoneNumber: '0431 111 111', selected: false },
+      { name: 'Sinan', phoneNumber: '0431 222 222', selected: false },
+      { name: 'Jafari', phoneNumber: '0431 333 333', selected: true },
     ])
 
     this.updateTimeEverySecond();

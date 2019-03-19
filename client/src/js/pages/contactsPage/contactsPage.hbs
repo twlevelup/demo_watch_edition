@@ -1,10 +1,8 @@
-<h1>Contacts</h1>
+<h3>Contacts</h3>
 <ul>
-  {{#each contacts}}
-    <li>
-      <span>Name: {{this.name}}</span>
-      <br/>
-      <span>Phone: {{this.phoneNumber}}</span>
+  {{#each contacts as |item index|}}
+    <li class='contact'>
+      <span >{{item.name}}</span>
     </li>
   {{/each}}
 </ul>
