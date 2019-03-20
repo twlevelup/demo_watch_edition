@@ -4,6 +4,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  node:{
+    fs: 'empty',
+
+  },
+
   cache: true,
   entry: {
     main: './client/src/main.js',
