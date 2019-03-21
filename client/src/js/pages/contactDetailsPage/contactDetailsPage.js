@@ -5,7 +5,7 @@ class ContactDetailsPage extends BasePage {
   template = require("./contactDetailsPage.hbs");
 
   pageWillLoad() {
-    this.details = StorageHub.getData("user");
+    this.details = StorageHub.getData("selected");
     this.allContactDetails = StorageHub.getData("contactDetails");
     this.name = this.details
     console.log('here', this.details);
@@ -24,7 +24,7 @@ class ContactDetailsPage extends BasePage {
   }
 
   leftButtonEvent() {
-    this.navigate("/");
+    this.navigate("contacts");
   }
 
   topButtonEvent() {

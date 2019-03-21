@@ -43,7 +43,7 @@ class ContactsPage extends BasePage {
 
   rightButtonEvent() {
     this.navigate("contactDetails");
-    StorageHub.setData("user", this.selected);
+    StorageHub.setData("selected", this.selected);
     
   }
 
