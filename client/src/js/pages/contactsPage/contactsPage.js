@@ -6,9 +6,12 @@ Number.prototype.mod = function (n) {
 
 class ContactsPage extends BasePage {
   template = require("./contactsPage.hbs");
-  tracker = 0 
+  tracker = 0; 
+  selected;
 
   pageWillLoad() {
+    // StorageHub.uploadFile("../../resources/contacts.txt");
+    this.contactDetails = StorageHub.getData("detailedContacts");
     this.contacts = StorageHub.getData("contacts");
     document.getElementById("clock-time");
   }
@@ -33,10 +36,15 @@ class ContactsPage extends BasePage {
     this.unselectItem(this.tracker);
     this.tracker = (this.tracker + direction).mod(this.contacts.length)
     this.contacts.length;
+    this.selected = this.contacts[this.tracker];
+    console.log(this.selected);
     this.selectItem(this.tracker);
   }
 
   rightButtonEvent() {
+    this.navigate("contactDetails");
+    StorageHub.setData("user", this.selected);
+    
   }
 
   leftButtonEvent() {

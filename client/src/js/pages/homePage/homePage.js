@@ -8,6 +8,7 @@ class HomePage extends BasePage {
   template = require('./homePage.hbs');
 
   pageWillLoad() {
+    // StorageHub.loadFile("/../../resources/contacts.txt");
     StorageHub.setData("contacts", [
       { name: "Ray", phoneNumber: "0431 111 111" },
       { name: "Sinan", phoneNumber: "0431 222 222"},
