@@ -34,9 +34,9 @@ describe('CountPage', () => {
 
       const result = page.render();
 
-      expect(result).toContain("<p>+</p>");
+      expect(result).toContain("+");
       expect(result).toContain("<p id=\"count-value\"></p>");
-      expect(result).toContain("<p>-</p>");
+      expect(result).toContain("-");
     });
   });
 
