@@ -1,6 +1,5 @@
 require('./main.css');
 require('./js/storage');
-require('./../resources/contactInfo');
 const App = require('watch-framework').App;
 
 const routes = require("./js/routes");
