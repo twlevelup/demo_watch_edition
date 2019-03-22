@@ -1,6 +1,5 @@
 const CountPage = require('./counterPage');
 const StorageHub = require('watch-framework').StorageHub;
-const AudioHub = require('watch-framework').AudioHub;
 
 describe('CountPage', () => {
   let watchFace;
@@ -12,7 +11,7 @@ describe('CountPage', () => {
   afterEach(() => {
     StorageHub.reset();
     jest.resetAllMocks();
-  })
+  });
 
   describe('#pageWillLoad', () => {
     it('should set contacts data on page load', () => {
@@ -25,8 +24,8 @@ describe('CountPage', () => {
 
       expect(StorageHub.getData).toBeCalledWith('count');
       expect(page.count).toEqual(countValue);
-    })
-  })
+    });
+  });
 
   describe('#render', () => {
     it('renders my page correctly', () => {
