@@ -40,13 +40,13 @@ describe('CountPage', () => {
     });
   });
 
-  describe('#leftButtonEvent', () => {
+  describe('#faceButtonEvent', () => {
     it('resets counter to 0', () => {
       const page = new CountPage({ watchFace });
       jest.spyOn(StorageHub,"setData");
       jest.spyOn(page, 'updateCountDisplay');
 
-      page.leftButtonEvent();
+      page.faceButtonEvent();
 
       expect(StorageHub.setData).toHaveBeenCalledTimes(1);
       expect(StorageHub.setData).toHaveBeenCalledWith("count", 0);

@@ -1,34 +1,28 @@
-#counter {
+#response {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  font-size: 10px;
 }
 
-.plus, .minus {
+.top, .bottom {
   text-align: center;
-  font-size: 30px;
   margin: 0px;
 }
 
-.middle-row {
+.middle {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.back-svg {
-  fill: white;
-}
-
-.question {
-  font-size: 30px;
-}
-
-#count-value {
+.center {
   display: flex;
   margin: 0;
   justify-content: space-between;
-  font-size: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
 }

@@ -1,3 +1,5 @@
 @import './styles/pages/home.css';
 @import './styles/pages/counter.css';
-@import './styles/pages/contacts.css'
+@import './styles/pages/contacts.css';
+@import './styles/pages/questionnaire.css';
+@import './styles/pages/response.css';

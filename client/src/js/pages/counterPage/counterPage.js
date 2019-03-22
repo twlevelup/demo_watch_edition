@@ -20,6 +20,10 @@ class CounterPage extends BasePage {
   }
 
   leftButtonEvent() {
+    this.navigate('question');
+  }
+
+  faceButtonEvent() {
     StorageHub.setData('count', 0);
     this.updateCountDisplay();
   }
