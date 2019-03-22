@@ -20,7 +20,6 @@ class ContactDetailsPage extends BasePage {
   pageDidLoad() {}
 
   rightButtonEvent() {
-    console.log(this.details);
   }
 
   leftButtonEvent() {

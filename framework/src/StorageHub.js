@@ -1,4 +1,3 @@
-const fs = require("fs");
 class StorageHub {
   constructor() {
     this.store = {};

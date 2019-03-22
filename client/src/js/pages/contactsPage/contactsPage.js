@@ -8,36 +8,34 @@ class ContactsPage extends BasePage {
   template = require("./contactsPage.hbs");
   tracker = 0; 
   selected;
+  list;
 
   pageWillLoad() {
-    // StorageHub.uploadFile("../../resources/contacts.txt");
-    this.contactDetails = StorageHub.getData("detailedContacts");
-    this.contacts = StorageHub.getData("contacts");
+    this.contactDetails = StorageHub.getData("contactDetails");
     document.getElementById("clock-time");
   }
 
   pageDidLoad(){
+    this.list = document.getElementsByClassName("contact");
+    this.selected = this.contactDetails[this.tracker];
     this.selectItem();
   }
 
   selectItem(item = 0) {
-    const list = document.getElementsByClassName("contact");
-    const currentItem = list[item];
+    const currentItem = this.list[item];
     currentItem.setAttribute("data-selected", true);
   }
 
   unselectItem(item) {
-    const list = document.getElementsByClassName("contact");
-    const currentItem = list[item];
+    const currentItem = this.list[item];
     currentItem.setAttribute("data-selected", false);
   }
 
   move(direction) {
     this.unselectItem(this.tracker);
-    this.tracker = (this.tracker + direction).mod(this.contacts.length)
-    this.contacts.length;
-    this.selected = this.contacts[this.tracker];
-    console.log(this.selected);
+    const numContacts = this.contactDetails.length;
+    this.tracker = (this.tracker + direction).mod(numContacts)
+    this.selected = this.contactDetails[this.tracker];
     this.selectItem(this.tracker);
   }
 

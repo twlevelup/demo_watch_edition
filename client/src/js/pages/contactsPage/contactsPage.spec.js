@@ -10,10 +10,10 @@ describe('ContactsPage', () => {
 
   describe('#render', () => {
     it('should render my specific contacts', () => {
-      const contacts = [
+      const contactDetails = [
         { name: 'hi', phoneNumber: '1234' },
       ];
-      StorageHub.setData('contacts', contacts)
+      StorageHub.setData('contactDetails', contactDetails)
       const page = new ContactsPage();
       page.pageWillLoad();
       expect(page.render()).toContain("<span>hi</span>");

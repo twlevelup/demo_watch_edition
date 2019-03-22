@@ -9,15 +9,6 @@ describe('HomePage', () => {
     watchFace = document.getElementById('watch-face');
   });
 
-  describe('#pageWillLoad', () => {
-    it('should set contacts data on page load', () => {
-      spyOn(StorageHub, 'setData')
-      const page = new HomePage();
-      page.pageWillLoad();
-      expect(StorageHub.setData).toBeCalledWith('contacts', expect.any(Array));
-    })
-  })
-
   describe('#render', () => {
     it('should render my page correctly', () => {
       const page = new HomePage();
