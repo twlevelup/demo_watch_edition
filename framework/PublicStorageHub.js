@@ -7,4 +7,6 @@ module.exports = {
   setData: StorageHubInstance.setData,
   reset: StorageHubInstance.reset,
   setDebug: StorageHubInstance.setDebug,
+  find: StorageHubInstance.find,
+  setJSON: StorageHubInstance.setJSON
 }
