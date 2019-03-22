@@ -16,8 +16,7 @@ describe('ContactsPage', () => {
       StorageHub.setData('contacts', contacts)
       const page = new ContactsPage();
       page.pageWillLoad();
-      expect(page.render()).toContain("<span>Name: hi</span>");
-      expect(page.render()).toContain("<span>Phone: 1234</span>");
+      expect(page.render()).toContain("<span>hi</span>");
     });
   });
 

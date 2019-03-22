@@ -1,0 +1,7 @@
+.contact{
+    font-size: 20px
+}
+
+[data-selected=true]{
+    color: mediumseagreen;
+}
