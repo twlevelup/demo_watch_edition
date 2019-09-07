@@ -50,6 +50,9 @@ class HomePage extends BasePage {
   bottomButtonEvent() {
     this.watchFace.scrollTop += 40;
   }
+  faceButtonEvent() {
+    AudioHub.playSound(plop)
+  }
 }
 
 module.exports = HomePage;
